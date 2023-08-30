@@ -5,10 +5,7 @@ import com.learning.expensetracker.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +25,15 @@ public class UserResource {
         Map<String , String> map = new HashMap<>();
         userMap.put("message" , "registered successfully");
 
+        return new ResponseEntity<>(map , HttpStatus.OK);
+    }
+    @PostMapping("/login")
+    public ResponseEntity<Map<String , String>> loginUser(@RequestBody Map<String , Object> userMap){
+        String email = (String) userMap.get("email");
+        String password = (String) userMap.get("password");
+        User user = userService.validateUser(email , password);
+        Map<String , String> map = new HashMap<>();
+        map.put("message", "logged successfully");
         return new ResponseEntity<>(map , HttpStatus.OK);
     }
 }
