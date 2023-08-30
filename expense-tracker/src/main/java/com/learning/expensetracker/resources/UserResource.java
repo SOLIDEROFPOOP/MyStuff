@@ -24,7 +24,6 @@ public class UserResource {
         User user = userService.registerUser(firstName , lastName , email , password);
         Map<String , String> map = new HashMap<>();
         userMap.put("message" , "registered successfully");
-
         return new ResponseEntity<>(map , HttpStatus.OK);
     }
     @PostMapping("/login")
