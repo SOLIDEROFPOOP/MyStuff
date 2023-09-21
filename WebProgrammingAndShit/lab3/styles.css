@@ -1,0 +1,112 @@
+.laboratory_work_header{
+    text-align: center;
+    
+}
+.form1{
+    text-align: center;
+    margin-right: 60%;
+}
+.container1{
+    background-image: url('image_3.jpg');
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+    color:#f5e7d7;
+    width: 80%;
+    margin:auto;
+}
+.second_box{
+    margin-right: 10%;
+}
+.container2{
+    width: 80%;
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+    margin:auto;
+}
+.divthree{
+    margin:auto;
+    margin-top: 5%;
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divthree div{
+    display: flex;
+    flex-direction: column;
+}
+
+.divthree div span{
+    display: flex;   
+}
+
+
+.spandiv{
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.spanp{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+.divfour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    color: white;
+    margin: auto;
+}
+.divfour div{
+    display: flex;
+    
+}
+
+.divfour div div{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(70, 81, 97);
+    align-items: center;
+}
+
+.litdiv{
+    margin-left: 20px;
+    position: relative;
+}
+
+.spantwo{
+    background-color: white;
+    color: black;
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+}
+.litdiv p{
+    margin-bottom: 20%;
+    padding: 2%;
+    align-items: center;
+}
+
+.litdiv button{
+    position: absolute;
+    bottom: 5%;
+    width: 80%;
+}
+
+
+.divtwo span:last-child{
+    width: 50%;
+    margin-right: 5%;
+}
+.divtwo span:first-child{
+    margin-left: 8%;
+}
+
+.divone span{
+    margin: 2% 10%;
+}
