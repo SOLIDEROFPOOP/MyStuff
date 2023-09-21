@@ -1,7 +1,6 @@
 package com.example.project.Controllers;
 
 import com.example.project.data.Category;
-import com.example.project.data.Page;
 import com.example.project.data.Product;
 import com.example.project.models.CategoryRepository;
 import com.example.project.models.ProductRepository;
@@ -145,8 +144,8 @@ public class AdminProductsController {
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable int id, RedirectAttributes redirectAttributes) throws IOException {
         Product product = productRepository.getOne(id);
-        productRepository.deleteById(id); // deleteById is a method from CrudRepository
         Product currentProduct = productRepository.getOne(product.getId());
+        productRepository.deleteById(id); // deleteById is a method from CrudRepository
         Path path2 = Paths.get("src/main/resources/static/media/" + currentProduct.getImage());
         Files.delete(path2);
         redirectAttributes.addFlashAttribute("message", "Product deleted");
