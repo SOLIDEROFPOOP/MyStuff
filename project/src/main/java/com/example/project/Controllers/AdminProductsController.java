@@ -6,6 +6,9 @@ import com.example.project.models.CategoryRepository;
 import com.example.project.models.ProductRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -27,16 +30,22 @@ public class AdminProductsController {
     private ProductRepository productRepository;
     @Autowired
     private CategoryRepository categoryRepository;
-    @GetMapping
+    @GetMapping()
     public String index(Model model){
+
+
         List<Product> products = productRepository.findAll();
         List<Category> categories = categoryRepository.findAll();
+
         HashMap<Integer , String> cats = new HashMap<>();
+
         for (Category cat : categories) {
             cats.put(cat.getId(), cat.getName());
         }
+
         model.addAttribute("products", products);
         model.addAttribute("cats", cats);
+
         return "admin/products/index";
     }
     @GetMapping("/add")
