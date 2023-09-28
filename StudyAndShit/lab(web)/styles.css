@@ -1,0 +1,149 @@
+/* Your existing styles */
+.header {
+    background-color: burlywood;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Left div with a fixed width of 20% */
+.left-div {
+    flex: 0 0 20%;
+    background-color: lightgreen;
+}
+
+/* Right div takes the rest of the space */
+.right-div {
+    flex: 1; /* Takes remaining space */
+    
+}
+.gridone{
+    display: grid;
+    margin-left: 200px;
+   
+  grid-auto-rows: 200px ;
+  grid-auto-columns:200px ;
+  grid-gap: 20px;
+}
+.divone{
+    margin-left: -100px;
+}
+
+
+.one{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: aqua;
+    background-image: url("/img/01.jpg");
+    background-size: cover;
+    
+}
+.two{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: aquamarine;
+    background-image: url("/img/02.jpg");
+    background-size: cover;
+}
+.three{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: beige;
+    background-image: url("/img/03.jpg");
+    background-size: cover;
+}
+.four{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: blue;
+    background-image: url("/img/04.jpg");
+    background-size: cover;
+}
+.five{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: palegreen;
+    background-image: url("/img/05.jpg");
+    background-size: cover;
+}
+.six{
+    grid-column-start: 1;
+    grid-column-end:2 ;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: aquamarine;
+    background-image: url("/img/06.jpg");
+    background-size: cover;
+
+}
+.seven{
+    grid-column-start: 2;
+    grid-column-end:3 ;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: rgb(146, 209, 188);
+    background-image: url("/img/07.jpg");
+    background-size: cover;
+}
+.eight{
+    grid-column-start: 1;
+    grid-column-end:2 ;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: rgb(142, 127, 255);
+    background-image: url("/img/08.jpg");
+    background-size: cover;
+}
+.nine{
+    grid-column-start: 2;
+    grid-column-end:3 ;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: rgb(40, 37, 57);
+    background-image: url("/img/09.jpg");
+    background-size: cover;
+}
+
+.ten{
+    grid-column-start: 3;
+    grid-column-end:5 ;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background-color: rgb(156, 16, 77);
+    background-image: url("/img/10.jpg");
+    background-size: cover;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    padding: 20px;
+    text-align: center;
+  }
