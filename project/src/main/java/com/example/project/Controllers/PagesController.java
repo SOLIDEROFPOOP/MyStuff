@@ -21,10 +21,6 @@ public class PagesController {
         model.addAttribute("page" , page);
         return "page";
     }
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
     @GetMapping("/{slug}")
     public String home(@PathVariable String slug ,Model model){
         Page page = pageRepository.findBySlug(slug);
