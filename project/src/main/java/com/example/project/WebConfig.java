@@ -12,13 +12,14 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("home");
     }
     */
-    /*
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
                 .addResourceHandler("/media/**")
-                .addResourceLocations("file:/Users/muratkapparov/IdeaProjects/MyStuff/project/src/main/resources/static/media/");
+                .addResourceLocations("file:/C:/Users/Murat/Documents/GitHub/MyStuff/project/src/main/resources/static/media/");
+
     }
-     */
+
 
 }
