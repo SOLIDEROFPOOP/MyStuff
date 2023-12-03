@@ -1,14 +1,11 @@
 package com.example.project.Controllers;
 
-import com.example.project.data.Category;
-import com.example.project.data.Product;
+import com.example.project.models.data.Category;
+import com.example.project.models.data.Product;
 import com.example.project.models.CategoryRepository;
 import com.example.project.models.ProductRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

@@ -1,6 +1,6 @@
 package com.example.project.models;
 
-import com.example.project.data.Category;
+import com.example.project.models.data.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

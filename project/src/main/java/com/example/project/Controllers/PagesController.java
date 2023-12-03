@@ -1,13 +1,12 @@
 package com.example.project.Controllers;
 
-import com.example.project.data.Page;
+import com.example.project.models.data.Page;
 import com.example.project.models.PageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -20,6 +19,10 @@ public class PagesController {
         Page page = pageRepository.findBySlug("home");
         model.addAttribute("page" , page);
         return "page";
+    }
+    @GetMapping("/login")
+    public String login(){
+        return "login";
     }
     @GetMapping("/{slug}")
     public String home(@PathVariable String slug ,Model model){

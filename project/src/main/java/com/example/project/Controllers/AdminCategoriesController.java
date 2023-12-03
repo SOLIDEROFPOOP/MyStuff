@@ -1,7 +1,6 @@
 package com.example.project.Controllers;
 
-import com.example.project.data.Category;
-import com.example.project.data.Page;
+import com.example.project.models.data.Category;
 import com.example.project.models.CategoryRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

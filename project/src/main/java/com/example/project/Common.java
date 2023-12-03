@@ -1,7 +1,7 @@
 package com.example.project;
 
-import com.example.project.data.Category;
-import com.example.project.data.Page;
+import com.example.project.models.data.Category;
+import com.example.project.models.data.Page;
 import com.example.project.models.Cart;
 import com.example.project.models.CategoryRepository;
 import com.example.project.models.PageRepository;
@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
 
@@ -21,7 +22,10 @@ public class Common {
     @Autowired
     private CategoryRepository categoryRepository;
     @ModelAttribute
-    public void  sharedData(Model model, HttpSession session){
+    public void  sharedData(Model model, HttpSession session, Principal principal){
+        if (principal != null){
+            model.addAttribute("principal" , principal.getName());
+        }
         List<Page> pages = pageRepository.findAllByOrderBySortingAsc();
         List<Category> categories = categoryRepository.findAll();
         boolean cartActive = false;

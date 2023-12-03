@@ -1,4 +1,4 @@
-package com.example.project.data;
+package com.example.project.models.data;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
