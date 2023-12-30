@@ -26,8 +26,8 @@ public class SecurityConfig{
          /*
          http
              .authorizeRequests()
-                 .antMatchers("/category/**").hasAnyRole("USER", "ADMIN")
-                 .antMatchers("/admin/**").hasAnyRole("ADMIN")
+                 N")
+                 .antMatchers("/admin/**").hasA.antMatchers("/category/**").hasAnyRole("USER", "ADMInyRole("ADMIN")
                  .antMatchers("/").permitAll()
                      .and()
                          .formLogin()
