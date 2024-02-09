@@ -1,18 +1,18 @@
 services:
   mysql:
-    image: mysql
-    restart: no
+    image: mysql:latest
+    restart: always
     environment:
-      MYSQL_DATABASE: 'user_db'
-      MYSQL_ROOT_PASSWORD: 'postgres'
+      MYSQL_DATABASE: 'temp'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "3306:3306"
-  spring-app:
+  dock:
     build:
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8081:8080"
     depends_on:
       - mysql
