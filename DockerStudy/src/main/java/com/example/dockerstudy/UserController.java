@@ -23,6 +23,6 @@ public class UserController {
         user.setId(15l);
         user.setEmail("fr");
         user.setUsername("bro");
-        
+
     }
 }
