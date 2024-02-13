@@ -1,20 +1,20 @@
 package com.example.graphqlstudy;
 
 import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.Arguments;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
-public class AuthorController {
+public class MainController {
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
 
 
-    public AuthorController(AuthorRepository authorRepository, BookRepository bookRepository) {
+    public MainController(AuthorRepository authorRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
     }
@@ -33,5 +33,13 @@ public class AuthorController {
         Book b = new Book(book.title, book.publisher, author);
         return bookRepository.save(b);
     }
+    @QueryMapping
+    List<Pet> pets(){
+        return List.of(
+                new Pet("NIGGA","BLACK"),
+                new Pet("FAGGOT","GAY")
+        );
+    }
     record BookInput(String title, String publisher, Long authorId){};
+    record Pet(String name, String color){};
 }
